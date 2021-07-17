@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legends</title>
+</head>
+<body>
+    {% for legend in legends %}
+        {{legend.legend}}<br>
+        {{legend.name}}<br>
+        {{legend.type}}<br>
+        {{legend.homeworld}}<br>
+        {{legend.tactical}}<br>
+        {{legend.passive}}<br>
+        {{legend.ultimate}}<br>
+        {{legend.lore}}<br>
+        {{legend.introduced}}<br>
+    {% endfor %}
+</body>
+</html>
