@@ -30,3 +30,17 @@ body{
     padding: 1% 5% 1% 5%;
     color: white;
 }
+
+.reg-icon{
+    color:  rgb(48, 40, 40);
+}
+
+.reg-text{
+    color: #fff;
+}
+
+.reg-head{
+    color: #fff;
+    font-family: 'Bebas Neue', cursive;
+    text-decoration: underline;
+}

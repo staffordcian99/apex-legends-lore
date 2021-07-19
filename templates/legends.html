@@ -1,8 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
-    {% for legend in legends %}
+    {% for legend in legends %} 
         <div class="container text-shadow"><h2 id="legend-name">{{legend.legend}}</h2></div>
-        <div class="divider container"></div>
         <div class="container content-bg text-shadow"> 
             <ul>
                 <li><b>Real Name:</b> {{legend.name}}</li><br>
@@ -18,6 +17,6 @@
             <h4>Lore:</h4>
             <p class="content-bg">{{legend.lore}}</p><br>
         </div>
-        <div class="divider container"></div>
+       
     {% endfor %}
 {% endblock %}
