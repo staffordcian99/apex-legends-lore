@@ -49,11 +49,16 @@ def register():
     return render_template("register.html")
 
 
+@app.route("/get_maps")
+def get_maps():
+    maps = mongo.db.maps.find()
+    return render_template("maps.html", maps=maps)
+
+
 @app.route("/log_in")
 def log_in():
     return render_template("login.html")
 
-    
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

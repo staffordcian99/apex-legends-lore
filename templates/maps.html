@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h2 class="center-align reg-head">Maps:</h2>
+    {% for map in maps %} 
+        <div class="container text-shadow"><h2 id="legend-name">{{map.map_name}}</h2></div>
+        <div class="container content-bg text-shadow"> 
+            <ul>
+                <li><b>Introduced:</b> {{map.introduced}}</li><br>
+                <li><b>Location:</b> {{map.location}}</li><br>
+            </ul>
+        </div>   
+        <div class="container text-shadow">
+            <h4>Lore:</h4>
+            <p class="content-bg">{{map.description}}</p><br>
+        </div>
+       
+    {% endfor %}
+{% endblock %}
