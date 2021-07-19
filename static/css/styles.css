@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Tourney:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+.text-shadow{
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.title{
+    font-family: 'Tourney', cursive;
+    margin-left: 2%;
+}
+
+main{
+    font-family: 'Nanum Myeongjo', serif;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+#legend-name{
+    font-family: 'Bebas Neue', cursive;
+    text-decoration: underline;
+}
+
+body{
+    background-color: rgb(48, 40, 40);
+}
+
+.container{
+    background-color:#b71c1c;
+    padding: 1% 5% 1% 5%;
+    color: white;
+}

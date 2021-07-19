@@ -1,14 +1,23 @@
 {% extends "base.html" %}
 {% block content %}
     {% for legend in legends %}
-        {{legend.legend}}<br>
-        {{legend.name}}<br>
-        {{legend.type}}<br>
-        {{legend.homeworld}}<br>
-        {{legend.tactical}}<br>
-        {{legend.passive}}<br>
-        {{legend.ultimate}}<br>
-        {{legend.lore}}<br>
-        {{legend.introduced}}<br>
+        <div class="container text-shadow"><h2 id="legend-name">{{legend.legend}}</h2></div>
+        <div class="divider container"></div>
+        <div class="container content-bg text-shadow"> 
+            <ul>
+                <li><b>Real Name:</b> {{legend.name}}</li><br>
+                <li><b>Legend type:</b> {{legend.type}}</li><br>
+                <li><b>Homeworld:</b> {{legend.homeworld}}</li><br>
+                <li><b>Tactical Ability:</b> {{legend.tactical}}</li><br>
+                <li><b>Passive Ability:</b> {{legend.passive}}</li><br>
+                <li><b>Ultimate Ability:</b> {{legend.ultimate}}</li><br>
+                <li><b>Season Introduced:</b> {{legend.introduced}}</li>
+            </ul>
+        </div>   
+        <div class="container text-shadow">
+            <h4>Lore:</h4>
+            <p class="content-bg">{{legend.lore}}</p><br>
+        </div>
+        <div class="divider container"></div>
     {% endfor %}
 {% endblock %}
