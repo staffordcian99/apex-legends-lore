@@ -10,7 +10,7 @@
                 <div class="row">
                     <div class="input-field col s12 reg-text text-shadow">
                         <i class="fas fa-at prefix reg-icon"></i>
-                        <input id="email" type="email" class="validate">
+                        <input id="email" name="email" type="email" class="validate">
                         <label for="email">Email</label>
                     </div>
                 </div>
@@ -18,7 +18,8 @@
                 <div class="row">
                     <div class="input-field col s12 reg-text text-shadow">
                         <i class="fas fa-user-plus prefix reg-icon"></i>
-                        <input id="username" name="username" type="text" class="validate">
+                        <input id="username" name="username" type="text" minlength="5"
+                            maxlength="15" pattern="^[a-zA-Z0-9]{5-15}$" class="validate" required>
                         <label for="username">Username</label>
                     </div>
                 </div>
@@ -26,7 +27,8 @@
                 <div class="row">
                     <div class="input-field col s12 reg-text text-shadow">
                         <i class="fas fa-key prefix reg-icon"></i>
-                        <input id="password" name="password" type="password" class="validate">
+                        <input id="password" name="password" type="password" minlength="5"
+                            maxlength="15" pattern="^[a-zA-Z0-9]{5-15}$" class="validate" required>
                         <label for="password">Password</label>
                     </div>
                 </div>

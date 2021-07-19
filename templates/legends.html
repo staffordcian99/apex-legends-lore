@@ -1,5 +1,7 @@
 {% extends "base.html" %}
+
 {% block content %}
+    <h2 class="center-align reg-head">Legends:</h2>
     {% for legend in legends %} 
         <div class="container text-shadow"><h2 id="legend-name">{{legend.legend}}</h2></div>
         <div class="container content-bg text-shadow"> 

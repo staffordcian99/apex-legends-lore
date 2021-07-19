@@ -27,6 +27,25 @@ def get_legends():
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
+    if request.method == "POST":
+        # check if username already exists in db
+        existing_user = mongo.db.users.find_one(
+            {"username": request.form.get("username").lower()})
+
+        if existing_user:
+            flash("username already exists")
+            return redirect(url_for("register"))
+
+        register = {
+            "username": request.form.get("username").lower(),
+            "password": generate_password_hash(request.form.get("password")),
+            "email": request.form.get("email")
+        }
+        mongo.db.users.insert_one(register)
+
+        # put new user into 'session'
+        session["user"] = request.form.get("username").lower()
+        flash("Registration Successful")
     return render_template("register.html")
 
 
