@@ -19,6 +19,7 @@
                 <li><a href="{{url_for('get_maps')}}">Maps</a></li>
                 <li><a href="{{url_for('log_in')}}">Log in</a></li>
                 <li><a href="{{url_for('register')}}">Register</a></li>
+                <li><a href="{{url_for('profile', username= session['user'])}}">Profile</a></li>
               </ul>
             </div>
           </nav>
@@ -73,6 +74,7 @@
               <li><a class="white-text text-shadow" href="{{url_for('get_maps')}}">Maps</a></li>
               <li><a class="white-text text-shadow" href="{{url_for('log_in')}}">Log-in</a></li>
               <li><a class="white-text text-shadow" href="{{url_for('register')}}">Register</a></li>
+              <li><a class="white-text text-shadow" href="{{url_for('profile', username= session['user'])}}">User Profile</a></li>
             </ul>
           </div>
         </div>
