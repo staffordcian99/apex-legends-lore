@@ -50,3 +50,11 @@ body{
     color: red;
     text-align: center;
 }
+
+.bg {
+    background-color: rgb(48, 40, 40);
+}
+
+.footer-icon{
+    color: rgb(48, 40, 40);
+}

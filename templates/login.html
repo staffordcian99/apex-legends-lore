@@ -9,7 +9,7 @@
                 
                 <div class="row">
                     <div class="input-field col s12 reg-text text-shadow">
-                        <i class="fas fa-user-plus prefix reg-icon"></i>
+                        <i class="fas fa-user-cog prefix reg-icon"></i>
                         <input id="username" name="username" type="text" minlength="5"
                             maxlength="15" pattern="^[a-zA-Z0-9]{5-15}$" class="validate" required>
                         <label for="username">Username</label>
@@ -18,7 +18,7 @@
 
                 <div class="row">
                     <div class="input-field col s12 reg-text text-shadow">
-                        <i class="fas fa-key prefix reg-icon"></i>
+                        <i class="fas fa-lock prefix reg-icon"></i>
                         <input id="password" name="password" type="password" minlength="5"
                             maxlength="15" pattern="^[a-zA-Z0-9]{5-15}$" class="validate" required>
                         <label for="password">Password</label>
@@ -32,6 +32,15 @@
                 </div>
             </div>
         </form>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <p class="center-align white-text">
+                No Account?
+                <a href="{{url_for('register')}}" class="white-text"> <em>Register Here!</em></a>
+            </p>
+        </div>
     </div>
 
 {% endblock %}

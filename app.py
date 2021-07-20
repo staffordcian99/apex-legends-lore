@@ -55,9 +55,27 @@ def get_maps():
     return render_template("maps.html", maps=maps)
 
 
-@app.route("/log_in")
+@app.route("/log_in", methods=["GET", "POST"])
 def log_in():
+    if request.method == "POST":
+        existing_user = mongo.db.users.find_one(
+            {"username": request.form.get("username").lower()})
+
+        if existing_user:
+            if check_password_hash(
+                    existing_user["password"], request.form.get("password")):
+                session["user"] = request.form.get("username").lower()
+                flash("Hello, {}".format(request.form.get("username")))
+            else:
+                flash("Incorrect Username and/or Password")
+                return redirect(url_for('log_in'))
+
+        else:
+            flash("Incorrect Username and/or Password")
+            return redirect(url_for('log_in'))
+
     return render_template("login.html")
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
