@@ -3,22 +3,42 @@
 {% block content %}
     <h2 class="center-align reg-head">Legends:</h2>
     {% for legend in legends %} 
-        <div class="container text-shadow"><h2 id="legend-name">{{legend.legend}}</h2></div>
-        <div class="container content-bg text-shadow"> 
-            <ul>
-                <li><b>Real Name:</b> {{legend.name}}</li><br>
-                <li><b>Legend type:</b> {{legend.type}}</li><br>
-                <li><b>Homeworld:</b> {{legend.homeworld}}</li><br>
-                <li><b>Tactical Ability:</b> {{legend.tactical}}</li><br>
-                <li><b>Passive Ability:</b> {{legend.passive}}</li><br>
-                <li><b>Ultimate Ability:</b> {{legend.ultimate}}</li><br>
-                <li><b>Season Introduced:</b> {{legend.introduced}}</li>
-            </ul>
-        </div>   
-        <div class="container text-shadow">
-            <h4>Lore:</h4>
-            <p class="content-bg">{{legend.lore}}</p><br>
-        </div>
+        <ul class="collapsible popout white-text text-shadow red darken-4 col s12 m6 offset-m3">
+            <li>
+                <div class="collapsible-header white-text text-shadow red darken-4">
+                    <i class="fas fa-chevron-circle-down"></i><h3 id="legend-name">{{legend.legend}}</h3>
+                </div>
+                <div class="collapsible-body">
+                    <span><b>Real Name:</b> {{legend.name}}</span>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header white-text text-shadow red darken-4">
+                    <i class="fas fa-chevron-circle-down"></i><h5 class="legend-name">Details</h5>
+                </div>
+                <div class="collapsible-body">
+                    <span>
+                        <ul>
+                            <li><b>Legend type:</b> {{legend.type}}</li><br>
+                            <li><b>Homeworld:</b> {{legend.homeworld}}</li><br>
+                            <li><b>Tactical Ability:</b> {{legend.tactical}}</li><br>
+                            <li><b>Passive Ability:</b> {{legend.passive}}</li><br>
+                            <li><b>Ultimate Ability:</b> {{legend.ultimate}}</li><br>
+                            <li><b>Season Introduced:</b> {{legend.introduced}}</li>
+                        </ul>
+                    </span>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header white-text text-shadow red darken-4">
+                    <i class="fas fa-chevron-circle-down"></i><h5>Lore</h5>
+                </div>
+                <div class="collapsible-body">
+                    <span>{{legend.lore}}</span>
+                </div>
+            </li>
+        </ul>
        
     {% endfor %}
+            
 {% endblock %}

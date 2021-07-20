@@ -3,17 +3,30 @@
 {% block content %}
     <h2 class="center-align reg-head">Maps:</h2>
     {% for map in maps %} 
-        <div class="container text-shadow"><h2 id="legend-name">{{map.map_name}}</h2></div>
-        <div class="container content-bg text-shadow"> 
-            <ul>
-                <li><b>Introduced:</b> {{map.introduced}}</li><br>
-                <li><b>Location:</b> {{map.location}}</li><br>
-            </ul>
-        </div>   
-        <div class="container text-shadow">
-            <h4>Lore:</h4>
-            <p class="content-bg">{{map.description}}</p><br>
-        </div>
+        <ul class="collapsible popout white-text text-shadow red darken-4 col s12 m6 offset-m3">
+            <li>
+                <div class="collapsible-header white-text text-shadow red darken-4">
+                    <i class="fas fa-chevron-circle-down"></i><h3 id="legend-name">{{map.map_name}}</h3>
+                </div>
+                <div class="collapsible-body">
+                    <span>
+                        <ul>
+                            <li><b>Introduced:</b> {{map.introduced}} <br>
+                            <li><b>Location:</b> {{map.location}} 
+                        </ul>
+                    </span>
+                </div>
+            </li>
+            
+            <li>
+                <div class="collapsible-header white-text text-shadow red darken-4">
+                    <i class="fas fa-chevron-circle-down"></i><h5>Lore</h5>
+                </div>
+                <div class="collapsible-body">
+                    <span>{{map.description}}</span>
+                </div>
+            </li>
+        </ul>
        
     {% endfor %}
 {% endblock %}
