@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+    
+    <h3 class="center-align reg-head text-shadow">Player plans:</h3>
+
+
+    {% for plan in plans %} 
+        <ul class="collapsible popout white-text text-shadow red darken-4 col s12 m6 offset-m3">
+            <li>
+                <div class="collapsible-header white-text text-shadow red darken-4">
+                    <i class="fas fa-chevron-circle-down"></i><h3>{{plan.type}}</h3>
+                </div>
+                <div class="collapsible-body">
+                    <span>{{plan.aim}}</span>
+                </div>
+            </li>
+        </ul>
+               
+    {% endfor %}
+
+{% endblock %}

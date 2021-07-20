@@ -13,28 +13,20 @@
     <header>
         <nav class="text-shadow  red darken-4">
             <div class="nav-wrapper">
-              <a href="#" class="brand-logo title">Apex Legends Lore</a>
+              <a href="{{url_for('home')}}" class="brand-logo title">Apex Legends Lore</a>
               <ul id="nav-mobile" class="right hide-on-med-and-down">
                 {% if session.user %}
+                  <li><a href="{{url_for('home')}}">Home</a></li>
                   <li><a href="{{url_for('profile', username= session['user'])}}">Profile</a></li>
                   <li><a href="{{url_for('get_legends')}}">Legends</a></li>
                   <li><a href="{{url_for('get_maps')}}">Maps</a></li>
+                  <li><a href="{{url_for('player_plans')}}">Player plans</a></li>
                 {% else %}
+                  <li><a href="{{url_for('home')}}">Home</a></li>
                   <li><a href="{{url_for('log_in')}}">Log in</a></li>
                   <li><a href="{{url_for('register')}}">Register</a></li>
                 {% endif %}
               </ul>
-            </div>
-          </nav>
-
-          <nav class="red darken-4">
-            <div class="nav-wrapper">
-              <form>
-                <div class="input-field">
-                  <input id="search" type="search" required>
-                  <label class="label-icon" for="search"><i class="fas fa-search"></i></label>
-                </div>
-              </form>
             </div>
           </nav>
     </header>
@@ -58,25 +50,27 @@
     </main>
 
     
-    <footer class="page-footer bg">
+    <footer class="page-footer bg text-shadow">
       <div class="container">
         <div class="row">
           <div class="col l6 s12">
             <h5 class="white-text">Follow Us!</h5>
             <ul>
-              <li><a href=""><i class="fab fa-youtube fa-2x footer-icon"></i></a></li>
-              <li><a href=""><i class="fab fa-twitch fa-2x footer-icon"></i></a></li>
-              <li><a href=""><i class="fab fa-twitter fa-2x footer-icon"></i></a></li> 
-              <li><a href=""><i class="fab fa-instagram fa-2x footer-icon"></i></a></li>
+              <li><a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube fa-2x footer-icon"></i></a></li>
+              <li><a href="https://www.twitch.tv/" target="_blank"><i class="fab fa-twitch fa-2x footer-icon"></i></a></li>
+              <li><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter fa-2x footer-icon"></i></a></li> 
+              <li><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram fa-2x footer-icon"></i></a></li>
             </ul>
           </div>
           <div class="col l4 offset-l2 s12">
             <h5 class="white-text">Links</h5>
             <ul>
+              <li><a href="{{url_for('home')}}">Home</a></li>
               {% if session.user %}
                 <li><a class="white-text text-shadow" href="{{url_for('profile', username= session['user'])}}">User Profile</a></li>
                 <li><a class="white-text text-shadow" href="{{url_for('get_legends')}}">Legends</a></li>
                 <li><a class="white-text text-shadow" href="{{url_for('get_maps')}}">Maps</a></li>
+                <li><a class="white-text text-shadow" href="{{url_for('player_plans')}}">Player plans</a></li>
               {% else %}
                 <li><a class="white-text text-shadow" href="{{url_for('log_in')}}">Log-in</a></li>
                 <li><a class="white-text text-shadow" href="{{url_for('register')}}">Register</a></li>
