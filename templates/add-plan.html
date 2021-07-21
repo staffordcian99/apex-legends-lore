@@ -4,7 +4,7 @@
   <h3 class="center-align reg-head text-shadow">Add a Plan:</h3>
 
   <div class="row card-panel red darken-4 text-shadow white-text">
-    <form class="col s12" method="POST" action="">
+    <form class="col s12" method="POST" action="{{url_for('add_plan')}}">
       <div class="row">
         <div class="input-field col s12">
           <i class="fas fa-wrench prefix footer-icon"></i>
@@ -19,6 +19,13 @@
           <textarea id="plan_aim" name="plan_aim" minlength="5"
           maxlength="250" class="materialize-textarea validate" required></textarea>
           <label for="plan_aim">How are you going to do it?</label>
+        </div>
+        <div class="row">
+          <div class="col s12 center-align">
+            <button type="submit" class="btn-large center-align bg white-text text-shadow">
+              Add Plan  <i class="far fa-paper-plane"></i>
+            </button>
+          </div>
         </div>
       </div>
     </form>

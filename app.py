@@ -110,8 +110,18 @@ def log_out():
     return redirect(url_for("log_in"))
 
 
-@app.route("/add_plan")
+@app.route("/add_plan", methods=["GET", "POST"])
 def add_plan():
+    if request.method == "POST":
+        plan = {
+            "plan_type": request.form.get("plan_type"),
+            "plan_aim": request.form.get("plan_aim"),
+            "created_by": session["user"]
+        }
+        mongo.db.plans.insert_one(plan)
+        flash("Plan added!")
+        return redirect(url_for("player_plans"))
+
     return render_template("add-plan.html")
 
 
