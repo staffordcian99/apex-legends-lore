@@ -125,8 +125,18 @@ def add_plan():
     return render_template("add-plan.html")
 
 
-@app.route("/edit_plan/<plan_id>",methods=["GET", "POST"])
+@app.route("/edit_plan/<plan_id>", methods=["GET", "POST"])
 def edit_plan(plan_id):
+    if request.method == "POST":
+        submit = {
+            "plan_type": request.form.get("plan_type"),
+            "plan_aim": request.form.get("plan_aim"),
+            "created_by": session["user"]
+        }
+        mongo.db.plans.update({"_id": ObjectId(plan_id)}, submit)
+        flash("Plan Updated!")
+        return redirect(url_for("player_plans"))
+
     plan = mongo.db.plans.find_one({"_id": ObjectId(plan_id)})
     return render_template("edit-plan.html", plan=plan)
 

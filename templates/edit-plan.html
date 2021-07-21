@@ -9,7 +9,7 @@
         <div class="input-field col s12">
           <i class="fas fa-wrench prefix footer-icon"></i>
           <input id="plan_type" name="plan_type" minlength="5" 
-          maxlength="50" type="text" class="validate" required>
+          maxlength="50" value="{{ plan.plan_type }}" type="text" class="validate" required>
           <label for="plan_type">What do you want to improve?</label>
         </div>
       </div>
@@ -17,11 +17,14 @@
         <div class="input-field col s12">
           <i class="fas fa-brain prefix footer-icon"></i>
           <textarea id="plan_aim" name="plan_aim" minlength="5"
-          maxlength="250" class="materialize-textarea validate" required></textarea>
+          maxlength="250" class="materialize-textarea validate" required>{{ plan.plan_aim }}</textarea>
           <label for="plan_aim">How are you going to do it?</label>
         </div>
         <div class="row">
           <div class="col s12 center-align">
+            <a href="{{url_for('player_plans')}}" class="btn-large text-shadow bg">
+              Cancel <i class="far fa-window-close"></i>
+            </a>
             <button type="submit" class="btn-large center-align bg white-text text-shadow">
               Edit Plan  <i class="far fa-edit"></i>
             </button>
