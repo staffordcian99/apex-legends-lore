@@ -110,6 +110,11 @@ def log_out():
     return redirect(url_for("log_in"))
 
 
+@app.route("/add_plan")
+def add_plan():
+    return render_template("add-plan.html")
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

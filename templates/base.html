@@ -21,6 +21,7 @@
                   <li><a href="{{url_for('get_legends')}}">Legends</a></li>
                   <li><a href="{{url_for('get_maps')}}">Maps</a></li>
                   <li><a href="{{url_for('player_plans')}}">Player plans</a></li>
+                  <li><a href="{{url_for('add_plan')}}">Add Player Plan</a></li>
                 {% else %}
                   <li><a href="{{url_for('home')}}">Home</a></li>
                   <li><a href="{{url_for('log_in')}}">Log in</a></li>
@@ -70,7 +71,8 @@
                 <li><a class="white-text text-shadow" href="{{url_for('profile', username= session['user'])}}">User Profile</a></li>
                 <li><a class="white-text text-shadow" href="{{url_for('get_legends')}}">Legends</a></li>
                 <li><a class="white-text text-shadow" href="{{url_for('get_maps')}}">Maps</a></li>
-                <li><a class="white-text text-shadow" href="{{url_for('player_plans')}}">Player plans</a></li>
+                <li><a class="white-text text-shadow" href="{{url_for('player_plans')}}">Player Plans</a></li>
+                <li><a class="white-text text-shadow" href="{{url_for('add_plan')}}">Add Player Plans</a></li>
               {% else %}
                 <li><a class="white-text text-shadow" href="{{url_for('log_in')}}">Log-in</a></li>
                 <li><a class="white-text text-shadow" href="{{url_for('register')}}">Register</a></li>
