@@ -3,20 +3,26 @@
     
     <h3 class="center-align reg-head text-shadow">Player plans:</h3>
 
-
     {% for plan in plans %} 
-        <ul class="collapsible popout white-text text-shadow red darken-4 col s12 m6 offset-m3">
+        <ul class="collapsible popout red darken-4 text-shadow white-text">
             <li>
-                <div class="collapsible-header white-text text-shadow red darken-4">
-                    <i class="fas fa-chevron-circle-down"></i><h3>{{plan.plan_type}}</h3>
+                <div class="collapsible-header white-text red darken-4 text-shadow">
+                    <div class="col s3">
+                        <i class="fas fa-chevron-circle-down"></i> 
+                        <a class="btn-small">Completed!</a>
+                        <a class="btn-small">Edit</a>
+                    </div>
+                    <div class="col s9">
+                        <strong>{{plan.plan_type}}</strong>
+                    </div>
                 </div>
                 <div class="collapsible-body">
-                    <p><b>What to do:</b> {{plan.plan_aim}}</p>
-                    <p><b>Created by:</b> {{plan.created_by}}</p>
+                    <span>
+                        <p><b>What to do:</b> {{plan.plan_aim}}</p>
+                        <p><b>Created by:</b> {{plan.created_by}}</p>
+                    </span>
                 </div>
             </li>
         </ul>
-               
     {% endfor %}
-
 {% endblock %}

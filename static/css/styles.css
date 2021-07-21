@@ -58,3 +58,15 @@ body{
 .footer-icon{
     color: rgb(48, 40, 40);
 }
+
+.btn-small{
+    background-color: rgb(48, 40, 40);
+    text-align: right;
+    margin: 5px;
+}
+
+.collapsible-header .col strong{
+    margin: 5px;
+    font-size: 30px;
+    line-height: 42px;
+}
