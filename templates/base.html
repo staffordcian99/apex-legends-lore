@@ -66,7 +66,7 @@
           <div class="col l4 offset-l2 s12">
             <h5 class="white-text">Links</h5>
             <ul>
-              <li><a href="{{url_for('home')}}">Home</a></li>
+              <li><a href="{{url_for('home')}}" class="white-text text-shadow">Home</a></li>
               {% if session.user %}
                 <li><a class="white-text text-shadow" href="{{url_for('profile', username= session['user'])}}">User Profile</a></li>
                 <li><a class="white-text text-shadow" href="{{url_for('get_legends')}}">Legends</a></li>

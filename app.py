@@ -141,6 +141,13 @@ def edit_plan(plan_id):
     return render_template("edit-plan.html", plan=plan)
 
 
+@app.route("/delete_plan/<plan_id>")
+def delete_plan(plan_id):
+    mongo.db.plans.remove({"_id": ObjectId(plan_id)})
+    flash("Plan Deleted!")
+    return redirect(url_for("player_plans"))
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

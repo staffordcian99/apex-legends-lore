@@ -3,6 +3,17 @@
     
     <h3 class="center-align reg-head text-shadow">Player plans:</h3>
 
+    <div class="row">
+        <div class="col s12 m8 offset-m2">
+            <div class="card-panel red darken-4 white-text text-shadow center-align">
+                <p>
+                    Our player plans allow you to document what you
+                    need to improve your gameplay and how you plan to do it!
+                </p>
+            </div>   
+        </div>
+    </div>
+
     {% for plan in plans %} 
         <ul class="collapsible popout red darken-4 text-shadow white-text">
             <li>
@@ -10,7 +21,7 @@
                     <div class="col s3">
                         <i class="fas fa-chevron-circle-down"></i> 
                         {% if session.user|lower == plan.created_by|lower %}
-                            <a class="btn-small">Completed!</a>
+                            <a class="btn-small" href="{{url_for('delete_plan', plan_id=plan._id)}}">Delete</a>
                             <a class="btn-small" href="{{url_for('edit_plan', plan_id=plan._id)}}">Edit</a>
                         {% endif %}
                     </div>
