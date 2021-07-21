@@ -125,6 +125,12 @@ def add_plan():
     return render_template("add-plan.html")
 
 
+@app.route("/edit_plan/<plan_id>",methods=["GET", "POST"])
+def edit_plan(plan_id):
+    plan = mongo.db.plans.find_one({"_id": ObjectId(plan_id)})
+    return render_template("edit-plan.html", plan=plan)
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
