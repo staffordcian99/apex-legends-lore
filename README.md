@@ -41,8 +41,6 @@ The primary goal of the website is for fans of the game to find out more informa
 3. As a user, I want to easily create new player plans.
 4. As a user , I want to easily edit and delete player plans.
 5. As a user, I want to have a good expierience on the website on whatever device i am using.
-6. As a fan, I want to view band merchandise and prices.
-7. As a venue owner, I want to find information about the history of the band and previous gigs.
 
 # Features
 Each page features a consistent and responsive header and footer.
