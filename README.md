@@ -1,102 +1,154 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Apex Lore
+## Video game lore website
+This is a website which documents information about the popular video game Apex legends. The website features information about the legends and maps which feature in the game and also allows users to plan how they might improve at the game. The website allows users to register and log in and is connected to a database which contains collections of legends, maps, plans and users.
 
-Welcome USER_NAME,
+The primary goal of the website is for fans of the game to find out more information about the game and to provide a space for thoses fans to plan and improve.
+ ### The Business Goals of This Website Are:
+ 1. Povide a place for fans of apex legends to find information about the games features.
+ 2. Build a large userbase.
+ 3. Attract more fans to the website.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. The last update to this file was: **July 2, 2021**
+ ### The User Goals of This Website Are:
+ 1. Gather information about the legends featured in the game.
+ 2. Gather information about the maps featured in the game.
+ 3. Find ways to improve at the game.
+ 4. Set goals and outline ways for them to improve.
+ 
 
-## Gitpod Reminders
+ # UX
+ ### The ideal user:
+ * Loves to play video games.
+ * Is a fan of battle royale style video games.
+ * Is a fan of Apex legends.
+ * Is interested in the lore of the game.
+ * Wants to improve at the game.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+ ### Visitors to this website are searching for:
+ * Information about the maps and legends featured in apex legends.
+ * Ways to improve as an apex legends player.
 
-`python3 -m http.server`
+ ### This project caters for these needs by:
+ * Providing information about the maps and legends featured in apex legends.
+ * Allowing users to login and create player plans for improvement.
+ * Providing a simple layout to prevent information overload.
+ * Being easy to navigate.
+ * Allowing users edit and delete their plans when needed.
 
-A blue button should appear to click: _Make Public_,
+ ## User Stories
 
-Another blue button should appear to click: _Open Browser_.
+1. As a new user, I want to be able to easily navigate the site.
+2. As a new user, I want to easily find information about Apex legend features.
+3. As a user, I want to easily create new player plans.
+4. As a user , I want to easily edit and delete player plans.
+5. As a user, I want to have a good expierience on the website on whatever device i am using.
+6. As a fan, I want to view band merchandise and prices.
+7. As a venue owner, I want to find information about the history of the band and previous gigs.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+# Features
+Each page features a consistent and responsive header and footer.
+The header consists of a logo in the top left corner which links to the home page, a main navigation bar which on larger screens displays in the top right corner of the screen and a side navigation bar which is slides out when the menu icon is clicked. The side navigation bar displays on all screen sizes.
 
-A blue button should appear to click: _Make Public_,
+The footer contains three parts, the Follow us! section contains social media and streaming service links, the Links section contains internal links to each page on the website and at the bottom there is a copyright bar.
 
-Another blue button should appear to click: _Open Browser_.
+Every page has a consistently styled heading except the profile page, which contains a heading of the users username in a card component.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+## Home
+The home page contains a welcome message and links to the register and login pages.
 
-To log into the Heroku toolbelt CLI:
+## Register
+The register page contains a form with the input fields of email, username and password and also a link to the login page for existing users.
+## Log in 
+The Log in page contains a form with the input fields of username and password and also a link to the register page for new users.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+## Profile
+The profile page uses the users username as a title and contains a link for logging out.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+## Legends
+The legends page contains collapsible components which hold information on each Legend featured in Apex legends.
 
-------
+## Maps
+The Maps page contains collapsible components which hold information on each map featured in Apex legends.
 
-## Release History
+## Player plans
+The player plans page contains a short description of what player plans are and collapsible components which hold information on each user created player plan. The plans also have buttons visible to the users who created them with the options to edit and delete the plans.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+## Add a plan
+The add a plan page contains a form aloowin user to create a plan and add it to the plans database so that it features on the player plans page.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+## Existing Features
+* Header logo: 
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+Features on every page, allows users to clearly recognise the website.
+Clicking it returns the user to the home page as is convention.
+* Header Navigation Bar:
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+Features on every page and allows the user to easily navigate the wesite and find any information they are looking for.
+* Header Navigation Sidebar:
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+Has the same function as the navigation bar but is a slide out sidebar that features at every screensize.
+* Footer Social Icons:
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+Features on every page, they allow users to easily access social media sites and video streaming services watch gameclips.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+* Footer Internal Links
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+Features on every page and allows users to easily navigate to everry page on the website.
+* Home page:
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+Displays a welcome message and links to log in and register
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+* Register page:
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+Contains a form to allow users to register.
+* Log in Page:
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+Contains a form to allow users to log in.
+* Legends and Maps pages:
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+Contain collapsible elements to neatly present information about the maps and Legends in Apex Legends.
 
-------
+* Player plans page:
+Contains collapsiple elements to neatky display the player plans, the plans also feature edit and delete buttons for the user to use.
 
-## FAQ about the uptime script
+Add a plan page:
 
-**Why have you added this script?**
+Contains a form for users to add a plan to the database for it to be displayed on the player plans page.
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+## Features to implement in the future:
+* Add animations to the navigation bar and possibly add icons.
+* Add images for each map and legend.
+* Allow users to share their own game clips.
 
-**How will this affect me?**
+# Technologies Used:
+* This Website was built using the HTML, CSS, Javascript and Python programming languages.
+*  [Gitpod](https://www.gitpod.io/) was the IDE used during the development of this project.
+* [Materialize Cdn](https://materializecss.com/) was used to simplify the structure of the website and to easily make the website responsive. It also provide the navbar, side navbar, collapsible and some form components.
+[Font Awesome](https://fontawesome.com/) was used to provide icons.
+* [Google Fonts](https://fonts.google.com/) was used to style the website fonts.
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+# Testing
+The testing information can be found in a seperate [TESTING.md](TESTING.md) file. 
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+# Deployment
+This project was developed using [Gitpod IDE](https://www.gitpod.io/), committed to git and pushed to GitHub using the terminal.
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+To deploy this page to Heroku from its [GitHub repository](https://github.com/ staffordcian99 /apex-legends-lore ), the following steps were taken:
+1. Log in to heroku.
+2. Create a new app.
+3. Click on the deploy tab option.
+4. Click on the option to connect to a github repository
+5. connect to the correct github repository
+6. Click to allow automatic deploys.
+7. Click on deploy main branch.
 
-**So….?**
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+At the moment of submitting this Milestone project the Development Branch and Master Branch are identical.
 
-**Can I opt out?**
+# Credits
+## Content
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+* The content for the legends and maps pages was copied from [Apex Legends wiki](https://apexlegends.fandom.com/wiki/Apex_Legends_Wiki).
 
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
 
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+## Code 
+All code apart from the materialize components stated was my own.
