@@ -1,9 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&family=Tourney:ital@1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
+ /* used on every page */ 
+
 .text-shadow{
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
+
+.bg {
+    background-color: rgb(48, 40, 40);
+}
+
+ /*base.html styles */ 
 
 .title{
     font-family: 'Tourney', cursive;
@@ -16,11 +24,6 @@ main{
     margin-right: 5%;
 }
 
-#legend-name{
-    font-family: 'Bebas Neue', cursive;
-    text-decoration: underline;
-}
-
 body{
     background-color: rgb(48, 40, 40);
 }
@@ -29,7 +32,16 @@ body{
     background-color:#b71c1c;
     padding: 1% 5% 1% 5%;
     color: white;
+} 
+
+/* legends.html styles */ 
+
+#legend-name{
+    font-family: 'Bebas Neue', cursive;
+    text-decoration: underline;
 }
+
+ /* register.html styles */ 
 
 .reg-icon{
     color:  rgb(48, 40, 40);
@@ -45,15 +57,15 @@ body{
     text-decoration: underline;
 }
 
+ /* flash messages styles*/ 
+
 .flash-txt{
     line-height: 2;
     color: red;
     text-align: center;
 }
 
-.bg {
-    background-color: rgb(48, 40, 40);
-}
+ /* footer styles */ 
 
 .footer-icon{
     color: rgb(48, 40, 40);
@@ -65,11 +77,15 @@ body{
     margin: 5px;
 }
 
+ /* player plan styles */ 
+
 .collapsible-header .col strong{
     margin: 5px;
     font-size: 30px;
     line-height: 42px;
 }
+
+ /* sidenav color */ 
 
 .menu-color{
     color: #b71c1c;

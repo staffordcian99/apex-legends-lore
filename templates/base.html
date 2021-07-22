@@ -11,41 +11,42 @@
 </head>
 <body>
     <header>
-        <nav class="text-shadow red darken-4">
-          <div class="nav-wrapper col 12">
-            <a href="{{url_for('home')}}" class="brand-logo title">Apex Lore</a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down">
-              {% if session.user %}
-                <li><a href="{{url_for('home')}}">Home</a></li>
-                <li><a href="{{url_for('profile', username= session['user'])}}">Profile</a></li>
-                <li><a href="{{url_for('get_legends')}}">Legends</a></li>
-                <li><a href="{{url_for('get_maps')}}">Maps</a></li>
-                <li><a href="{{url_for('player_plans')}}">Player plans</a></li>
-                <li><a href="{{url_for('add_plan')}}">Add Player Plan</a></li>
-              {% else %}
-                <li><a href="{{url_for('home')}}">Home</a></li>
-                <li><a href="{{url_for('log_in')}}">Log in</a></li>
-                <li><a href="{{url_for('register')}}">Register</a></li>
-              {% endif %}
-            </ul>
-          </div>
-        </nav>
-
-        <ul id="slide-out" class="sidenav text-shadow red darken-4">
-          {% if session.user %}
-            <li><a href="{{url_for('home')}}" class="white-text">Home</a></li>
-            <li><a href="{{url_for('profile', username= session['user'])}}" class="white-text">Profile</a></li>
-            <li><a href="{{url_for('get_legends')}}" class="white-text">Legends</a></li>
-            <li><a href="{{url_for('get_maps')}}" class="white-text">Maps</a></li>
-            <li><a href="{{url_for('player_plans')}}" class="white-text">Player plans</a></li>
-            <li><a href="{{url_for('add_plan')}}" class="white-text">Add Player Plan</a></li>
-          {% else %}
-            <li><a href="{{url_for('home')}}" class="white-text">Home</a></li>
-            <li><a href="{{url_for('log_in')}}" class="white-text">Log in</a></li>
-            <li><a href="{{url_for('register')}}" class="white-text">Register</a></li>
-          {% endif %}
-        </ul>
-        <a href="#" data-target="slide-out" class="sidenav-trigger menu-color"><i class="fas fa-bars fa-3x"></i></a>
+      <!--main navbar-->
+      <nav class="text-shadow red darken-4">
+        <div class="nav-wrapper col 12">
+          <a href="{{url_for('home')}}" class="brand-logo title">Apex Lore</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            {% if session.user %}
+              <li><a href="{{url_for('home')}}">Home</a></li>
+              <li><a href="{{url_for('profile', username= session['user'])}}">Profile</a></li>
+              <li><a href="{{url_for('get_legends')}}">Legends</a></li>
+              <li><a href="{{url_for('get_maps')}}">Maps</a></li>
+              <li><a href="{{url_for('player_plans')}}">Player plans</a></li>
+              <li><a href="{{url_for('add_plan')}}">Add Player Plan</a></li>
+            {% else %}
+              <li><a href="{{url_for('home')}}">Home</a></li>
+              <li><a href="{{url_for('log_in')}}">Log in</a></li>
+              <li><a href="{{url_for('register')}}">Register</a></li>
+            {% endif %}
+          </ul>
+        </div>
+      </nav>
+      <!--side navbar-->
+      <ul id="slide-out" class="sidenav text-shadow red darken-4">
+        {% if session.user %}
+          <li><a href="{{url_for('home')}}" class="white-text">Home</a></li>
+          <li><a href="{{url_for('profile', username= session['user'])}}" class="white-text">Profile</a></li>
+          <li><a href="{{url_for('get_legends')}}" class="white-text">Legends</a></li>
+          <li><a href="{{url_for('get_maps')}}" class="white-text">Maps</a></li>
+          <li><a href="{{url_for('player_plans')}}" class="white-text">Player plans</a></li>
+          <li><a href="{{url_for('add_plan')}}" class="white-text">Add Player Plan</a></li>
+        {% else %}
+          <li><a href="{{url_for('home')}}" class="white-text">Home</a></li>
+          <li><a href="{{url_for('log_in')}}" class="white-text">Log in</a></li>
+          <li><a href="{{url_for('register')}}" class="white-text">Register</a></li>
+        {% endif %}
+      </ul>
+      <a href="#" data-target="slide-out" class="sidenav-trigger menu-color"><i class="fas fa-bars fa-3x"></i></a>
     </header>
    
     <section>
@@ -70,18 +71,20 @@
     <footer class="page-footer bg text-shadow">
       <div class="container">
         <div class="row">
+          <!--Social media links-->
           <div class="col l6 s12">
-            <h5 class="white-text">Follow Us!</h5>
-            <ul>
+            <h5 class="white-text center-align text-shadow">Follow Us!</h5>
+            <ul class="center-align">
               <li><a href="https://www.youtube.com/" target="_blank"><i class="fab fa-youtube fa-2x footer-icon"></i></a></li>
               <li><a href="https://www.twitch.tv/" target="_blank"><i class="fab fa-twitch fa-2x footer-icon"></i></a></li>
               <li><a href="https://twitter.com/" target="_blank"><i class="fab fa-twitter fa-2x footer-icon"></i></a></li> 
               <li><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram fa-2x footer-icon"></i></a></li>
             </ul>
           </div>
+          <!--internal website links-->
           <div class="col l4 offset-l2 s12">
-            <h5 class="white-text">Links</h5>
-            <ul>
+            <h5 class="white-text center-align text-shadow">Links</h5>
+            <ul class="center-align">
               <li><a href="{{url_for('home')}}" class="white-text text-shadow">Home</a></li>
               {% if session.user %}
                 <li><a class="white-text text-shadow" href="{{url_for('profile', username= session['user'])}}">User Profile</a></li>
